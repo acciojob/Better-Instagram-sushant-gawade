@@ -1,63 +1,37 @@
-#div1 {
-  background-image: url("https://picsum.photos/id/237/200/300");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
+/* General Grid Setup */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 10px;
+    width: 600px; /* Adjust as needed */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
 }
 
-#div2 {
-  background-image: url("https://picsum.photos/seed/picsum/200/300");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
+.grid-item {
+    width: 100%;
+    /* Aspect ratio hack for square divs */
+    padding-bottom: 100%; 
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddd;
+    cursor: grab; /* Indicates the item is draggable */
+    transition: transform 0.2s; /* Smooth visual feedback */
 }
 
-#div3 {
-  background-image: url("https://picsum.photos/200/300?grayscale");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
+/* Optional: Styling for a placeholder effect during drag */
+.dragging {
+    opacity: 0.4;
+    border: 2px dashed #333;
 }
 
-#div4 {
-  background-image: url("https://picsum.photos/200/300/");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
-}
-
-#div5 {
-  background-image: url("https://picsum.photos/200/300.jpg");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
-}
-
-#div6 {
-  background-image: url("https://picsum.photos/id/102/200/300");
-  height: 300px;
-  width: 200px;
-  margin: 20px;
-}
-
-div.container {
-  border: 5px solid #555;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.selected {
-  border: 5px solid rgb(0, 195, 255);
-}
-
-p {
-  text-align: center;
-}
-
-button {
-  margin: 20px;
-}
+/* Background Images (Placeholder URLs - replace with your actual images) */
+/* The key is that the JavaScript will swap these styles between the divs */
+#div1 { background-image: url('https://picsum.photos/seed/a/200/200'); }
+#div2 { background-image: url('https://picsum.photos/seed/b/200/200'); }
+#div3 { background-image: url('https://picsum.photos/seed/c/200/200'); }
+#div4 { background-image: url('https://picsum.photos/seed/d/200/200'); }
+#div5 { background-image: url('https://picsum.photos/seed/e/200/200'); }
+#div6 { background-image: url('https://picsum.photos/seed/f/200/200'); }
