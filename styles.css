@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     grid-gap: 10px;
-    width: 600px; /* Adjust grid width */
+    width: 600px; 
     margin: 20px auto;
     padding: 10px;
     border: 1px solid #ddd;
@@ -16,9 +16,9 @@
     padding-bottom: 100%; 
     background-size: cover;
     background-position: center;
-    border: 2px solid transparent; /* Base border */
-    cursor: grab; /* Indicates the item is draggable */
-    transition: all 0.2s ease-in-out; /* Smooth transitions for visual feedback */
+    border: 2px solid transparent;
+    cursor: grab;
+    transition: all 0.2s ease-in-out;
 }
 
 /* Visual Feedback Classes */
@@ -29,13 +29,11 @@
 }
 
 .grid-item.over {
-    /* Style for the drop target */
     border: 2px solid #007bff; 
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
-/* Background Images (Placeholder URLs - replace with your actual images) */
-/* The JS will swap the 'background-image' property between the elements */
+/* Background Images (Placeholder URLs) */
 #div1 { background-image: url('https://picsum.photos/seed/better1/300/300'); }
 #div2 { background-image: url('https://picsum.photos/seed/better2/300/300'); }
 #div3 { background-image: url('https://picsum.photos/seed/better3/300/300'); }
