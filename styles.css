@@ -3,11 +3,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     grid-gap: 10px;
-    width: 600px; /* Adjust as needed */
+    width: 600px; /* Adjust grid width */
     margin: 20px auto;
-    border: 1px solid #ccc;
     padding: 10px;
-    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .grid-item {
@@ -16,22 +16,29 @@
     padding-bottom: 100%; 
     background-size: cover;
     background-position: center;
-    border: 1px solid #ddd;
+    border: 2px solid transparent; /* Base border */
     cursor: grab; /* Indicates the item is draggable */
-    transition: transform 0.2s; /* Smooth visual feedback */
+    transition: all 0.2s ease-in-out; /* Smooth transitions for visual feedback */
 }
 
-/* Optional: Styling for a placeholder effect during drag */
+/* Visual Feedback Classes */
 .dragging {
     opacity: 0.4;
+    transform: scale(0.95);
     border: 2px dashed #333;
 }
 
+.grid-item.over {
+    /* Style for the drop target */
+    border: 2px solid #007bff; 
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
 /* Background Images (Placeholder URLs - replace with your actual images) */
-/* The key is that the JavaScript will swap these styles between the divs */
-#div1 { background-image: url('https://picsum.photos/seed/a/200/200'); }
-#div2 { background-image: url('https://picsum.photos/seed/b/200/200'); }
-#div3 { background-image: url('https://picsum.photos/seed/c/200/200'); }
-#div4 { background-image: url('https://picsum.photos/seed/d/200/200'); }
-#div5 { background-image: url('https://picsum.photos/seed/e/200/200'); }
-#div6 { background-image: url('https://picsum.photos/seed/f/200/200'); }
+/* The JS will swap the 'background-image' property between the elements */
+#div1 { background-image: url('https://picsum.photos/seed/better1/300/300'); }
+#div2 { background-image: url('https://picsum.photos/seed/better2/300/300'); }
+#div3 { background-image: url('https://picsum.photos/seed/better3/300/300'); }
+#div4 { background-image: url('https://picsum.photos/seed/better4/300/300'); }
+#div5 { background-image: url('https://picsum.photos/seed/better5/300/300'); }
+#div6 { background-image: url('https://picsum.photos/seed/better6/300/300'); }
